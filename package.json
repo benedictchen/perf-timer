@@ -1,6 +1,6 @@
 {
   "name": "perftimer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple nodejs performance timer.",
   "main": "lib/PerfTimer.js",
   "scripts": {
