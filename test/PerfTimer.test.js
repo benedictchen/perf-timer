@@ -24,7 +24,7 @@ describe('PerfTimer', function () {
     _libPerfTimer2['default'].start('My random task');
     var resultSession = null;
     setTimeout(function () {
-      var resultSession = _libPerfTimer2['default'].stop('My random task');
+      resultSession = _libPerfTimer2['default'].stop('My random task');
       expect(resultSession.getDurationSeconds()).to.almost.equal(0.3, 2);
       done();
     }, 300);

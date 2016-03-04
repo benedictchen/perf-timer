@@ -73,7 +73,7 @@ class PerfSession {
     if (!diff) {
       return null;
     }
-    return parseFloat(`${diff[0]}.${diff[1]}`);
+    return diff[0] + (diff[1] / 1e9);
   }
 
   /** @override */
@@ -81,7 +81,7 @@ class PerfSession {
     var diff = this.duration;
     var timeString = `Started at: ${this.startTime}. Still running...`;
     if (diff) {
-      timeString = `${diff[0]}.${diff[1]} seconds.`;
+      timeString = `${this.getDurationSeconds()} seconds.`;
     }
     return `[${this.date}] - <"${this.name}"> : ${timeString}`;
   }

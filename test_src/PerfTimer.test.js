@@ -11,7 +11,7 @@ describe('PerfTimer', () => {
    PerfTimer.start(`My random task`);
    var resultSession = null;
    setTimeout(() => {
-      var resultSession = PerfTimer.stop(`My random task`);
+      resultSession = PerfTimer.stop(`My random task`);
       expect(resultSession.getDurationSeconds()).to.almost.equal(0.3, 2);
       done();
    }, 300);
