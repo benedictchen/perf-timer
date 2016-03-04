@@ -6,16 +6,16 @@ or else nothing will happen.
 
 Usage:
 
-    ```
-    PerfTimer.debugMode(true);  // <-- Important!
-    PerfTimer.start(`My random task`);
-    doStuff();
-    PerfTimer.stop(`My random task`);
+ ```javascript
+ PerfTimer.debugMode(true);  // <-- Important!
+ PerfTimer.start(`My random task`);
+ doStuff();
+ PerfTimer.stop(`My random task`);
 
-    // Write the results to file (/tmp/performance.log) and console.
-    PerfTimer.printReport();
+ // Write the results to file (/tmp/performance.log) and console.
+ PerfTimer.printReport();
 
-    ```
+ ```
  
  
 Created by Benedict Chen. If you like it, you can buy me a beer with PayPal.
