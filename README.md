@@ -18,6 +18,11 @@ Usage:
 
  ```
  
+ Development
+ -----------
+ - Dev-mode - `gulp devwatch` - this mode will watch your files, run tests, lint your code, and compile them as you code.
+ - Tests - `gulp test` or `npm test`
+ 
  
 Created by Benedict Chen. If you like it, you can buy me a beer with PayPal.
 
