@@ -1,6 +1,8 @@
 PerfTimer
 =========
- 
+
+[![Build Status](https://travis-ci.org/benedictchen/perf-timer.svg?branch=master)](https://travis-ci.org/benedictchen/perf-timer)
+
 A simple performance recorder.  Please note that debugMode must be on
 or else nothing will happen.
 
