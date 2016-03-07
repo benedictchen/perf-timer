@@ -42,4 +42,4 @@ Created by Benedict Chen. If you like it, you can buy me a beer with PayPal.
 -------------------
 If you enjoy this repo, please support me. [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WXQKYYKPHWXHS)
  
- 
+Please support us! 
