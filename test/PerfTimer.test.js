@@ -19,6 +19,7 @@ _chai2['default'].use(_chaiStats2['default']);
 var expect = _chai2['default'].expect;
 
 describe('PerfTimer', function () {
+
   it('should support basic start/stop of timer.', function (done) {
     _libPerfTimer2['default'].debugMode(true);
     _libPerfTimer2['default'].start('My random task');
@@ -28,6 +29,19 @@ describe('PerfTimer', function () {
       expect(resultSession.getDurationSeconds()).to.almost.equal(0.3, 2);
       done();
     }, 300);
+  });
+
+  describe('.printReport', function () {
+    it('should run without error.', function () {
+      _libPerfTimer2['default'].debugMode(true);
+      _libPerfTimer2['default'].start('My random task');
+      _libPerfTimer2['default'].stop('My random task');
+      var result;
+      expect(function () {
+        result = _libPerfTimer2['default'].printReport('/tmp/blah.log');
+      }).to.not['throw']();
+      expect(typeof result === 'string').to.be['true'];
+    });
   });
 });
 //# sourceMappingURL=PerfTimer.test.js.map

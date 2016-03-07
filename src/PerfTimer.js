@@ -160,7 +160,10 @@ export default class PerfTimer {
       header += '-';
     }
     header += '\n';
-    var text = `\n` + Object.values(_sessions)
+    var text = `\n` +
+                Object.keys(_sessions).map((sessionKey) => {
+                  return _sessions[sessionKey];
+                })
                 .sort((a, b) => {
                   var tDiff = b.getDurationSeconds() - a.getDurationSeconds();
                   if (isNaN(tDiff)) {
@@ -177,9 +180,10 @@ export default class PerfTimer {
         console.error(`Could not write to performance logs.`);
         console.error(err);
       } else {
-        console.warn(`Performance logs written to ${outputDir}`);
+        console.warn(`Performance logs written to ${outputDir}.`);
       }
     });
+    return text;
   }
 
 }
