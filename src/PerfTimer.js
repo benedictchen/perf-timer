@@ -55,6 +55,13 @@ class PerfSession {
   }
 
   /**
+   * Removes all previous sessions and starts fresh.
+   */
+  reset() {
+    _sessions = {};
+  }
+
+  /**
    * Stops the timer for the process.
    */
   stop() {

@@ -8,16 +8,28 @@ Usage:
 ------
 
  ```javascript
+  
  PerfTimer.debugMode(true);  // <-- Important!
  PerfTimer.start(`My random task`);
  doStuff();
  PerfTimer.stop(`My random task`);
 
  // Write the results to file (/tmp/performance.log) and console.
- PerfTimer.printReport();
+ PerfTimer.printReport('/my/path/performance.log');
 
  ```
  
+PerfTimer
+---------
+- static start(name: String)
+    - Starts timing a session of a specific name.
+- static stop(name: String)
+    - Stops timing a session with a specific name.
+- static reset()
+    - Clears all previous sessions.
+- static printReport(filePath: String) 
+    - Prints the reports to a file at the path defined.
+
  Development
  -----------
  - Dev-mode - `gulp devwatch` - this mode will watch your files, run tests, lint your code, and compile them as you code.
