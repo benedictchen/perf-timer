@@ -51,6 +51,7 @@ class PerfSession {
     this.date = new Date();
 
     this.startTime = startTime || process.hrtime();
+
     this.duration = null;
   }
 
@@ -149,7 +150,7 @@ export default class PerfTimer {
   /**
    * Generates performance reports and writes to file.
    * @param {String=} [optOutputPath] An optional output path to write the file
-   *   to.  Defaults to the current project's `tmp` folder.
+   *   to.  Defaults to `tmp` directory.
    */
   static printReport(optOutputPath) {
     if (!_debugMode) {
@@ -173,8 +174,8 @@ export default class PerfTimer {
                 }).map((session) => {
                   return session.toString();
                 }).join('\n');
-    console.error('\n\nPERFORMANCE REPORT FOR EMBODIED DIALOG:\n' + text);
-    var outputDir = optOutputPath || __dirname + '/../tmp/performance.log';
+    console.log('\n\nPERFORMANCE REPORT:\n' + text);
+    var outputDir = optOutputPath || __dirname + `/tmp/performance-${new Date()}.log`;
     fs.appendFile(outputDir, header + text, function (err) {
       if (err) {
         console.error(`Could not write to performance logs.`);
